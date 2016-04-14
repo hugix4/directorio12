@@ -1,0 +1,167 @@
+<HTML>
+<HEAD>
+<link rel="stylesheet" type="text/css" href="Pag1.css">
+<TITLE>Coordinaci&oacute;n General de Lenguas UNAM</TITLE>
+
+<script language="javascript" type="text/javascript">
+function vacio(cadena)
+  {                                    // DECLARACION DE CONSTANTES
+    var blanco = " \n\t" + String.fromCharCode(13); // blancos
+                                       // DECLARACION DE VARIABLES
+    var i;                             // indice en cadena
+    var es_vacio;                      // cadena es vacio o no
+    for(i = 0, es_vacio = true; (i < cadena.length) && es_vacio; i++) // INICIO
+      es_vacio = blanco.indexOf(cadena.charAt(i)) != - 1;
+    return(es_vacio);
+  }
+
+
+function comprobarRadio(radio)
+{
+  for(i = 0;i < radio.length;i++)
+  {
+    if(radio[i].checked)
+    {
+      return true;
+    }
+  }
+  return false;
+}
+
+// ejemplo validacion formulario
+function ValidaCampos(form)
+  {
+    if(vacio(form.Nombre.value) ||vacio(form.Plantel.value) || vacio(form.Turno.value) || vacio(form.TituloDelTexto.value) || vacio(form.Grupos.value) || vacio(form.Asignatura.value) || vacio(form.FechaDeEdicion.value) || vacio(form.FechaDeAnalisis.value) || vacio(form.Asignatura.value))
+      alert("Faltan Datos Generales");
+    //else if(!comprobarRadio(form.1))
+    //alert("Faltan preguntas =S ");  
+  }
+
+</script>
+</HEAD>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<body>
+<form name="formOne" action="apgform1.7.php" method="post" onSubmit="return ValidaCampos(this)">
+<img src="UNAM100AniosHch.png" style="float:right"/>
+<div align="center"><h1>Coordinación General de Lenguas</h1></div>
+<div align="left"><table align="center" width="85%" cellpadding="8">
+	<tr>
+		<td colspan="6"><p><br><br>
+<br>
+</p></td>
+	</tr>
+	<tr><td colspan="6"><h2>Datos Generales</h2></td></tr>
+	<tr>
+		<td align="right"><label for="apPat">Apellido paterno:</label></td>
+		<td align="left"><input id="apPat" type="text" name="apPat" size="30" value=""/></td>
+		<td align="right"><label for="apMat">Apellido materno:</label></td>
+		<td align="left"><input id="apMat" type="text" name="apMat" size="30" value=""/></td>		
+		<td align="right"><label for="Nombre">Nombre(s):</label></td>
+		<td align="left"><input id="Nombre" type="text" name="Nombre" size="30" value=""/></td>
+		</tr>
+	<tr>
+		<td align="right"><label for="RFC">RFC:</label></td>
+		<td align="left"><input id="RFC" type="text" name="RFC" size="30" value=""/></td>
+		<td align="right"><label for="Grado">Grado acad&eacute;mico:</label></td>
+		<td align="left"><input id="Grado" type="text" name="Grado" size="30" value=""/></td>
+		<td align="right"><label for="Antiguedad">Antig&uuml;edad en el CCH:</label></td>
+		<td align="left"><input id="Antiguedad" type="text" name="Antiguedad" size="30" value=""/></td>
+	</tr>
+	<tr>
+		<td align="right"><label for="Plantel">Plantel de adscripci&oacute;n:</label></td>
+		<td align="left"><input id="Plantel" type="text" name="Plantel" size="30" value=""/></td>
+		<td align="right"><label for="Asignatura">Asignatura(s) que imparte:</label></td>
+		<td align="left"><input id="Asignatura" type="text" name="Asignatura" size="30" value=""/></td>
+		<td align="right"><label for="Grupos">N&uacute;mero de grupos:</label></td>
+		<td align="left"><input id="Grupos" type="text" name="Grupos" size="30" value=""/></td>
+	</tr>
+	<tr>
+		<td align="right"><label for="Horas">N&uacute;mero de horas:</label></td>
+		<td><input id="Horas" type="text" name="Horas" size="30" value=""/></td>
+		<td align="right"><label for="Turno">Turno:</label></td>
+		<td><input id="Turno" type="text" name="Turno" size="30" value=""/></td>
+	</tr>
+	<tr>
+		<td colspan="3" align="right"><label for="Domicilio">Domicilio particular (Calle, #ext. int. colonia, c&oacute;digo postal):</label></td>
+		<td colspan="3"><input id="Domicilio" type="text" name="Domicilio" size="90" value=""/></td>
+	</tr>
+	<tr>
+		<td align="right"><label for="telCasa">Tel&eacute;fono casa:</label></td>
+		<td align="left"><input id="telCasa" type="text" name="telCasa" size="30" value=""/></td>
+		<td align="right"><label for="telCel">Tel&eacute;fono celular:</label></td>
+		<td align="left"><input id="telCel" type="text" name="telCel" size="30" value=""/></td>
+		<td align="right"><label for="email">Email:</label></td>
+		<td align="left"><input id="email" type="text" name="email" size="30" value=""/></td>
+	</tr>
+	<tr>
+		<td align="right"><label for="Categoria">Categor&iacute;a:</label></td>
+		<td align="left"><input id="Categoria" type="text" name="Categoria" size="30" value=""/></td>
+	</tr>
+	<tr></tr>
+
+	<hr size="4"/>	
+	<tr>
+	</tr>
+	</table>
+	<table align="center" width="85%" cellpadding="8">
+	<tr><td colspan="6"><h2>Informaci&oacute;n sobre los grupos</h2></td></tr>	
+	<tr>
+		<td colspan="3" align="left"><b>Grupos que atiende (Ejemplo: 104B, 264, 302A, 405B, 502, 601B...): </b></td>
+		<td colspan="3" align="left"><input size="100" id="Grupos" type="text" name="Grupos" value=""/></td>		
+	</tr>
+	<tr>
+		<td colspan="6" align="left"><b>&iquest;Cu&aacute;les son los &uacute;ltimos 3 cursos de actualizaci&oacute;n m&aacute;s significativos (m&iacute;nimo de 20 hrs.) y/o diplomados que ha tomado a la fecha y en donde: </b></td>				
+	</tr>
+	<tr>
+	<td colspan="6" align="left"><input size="180" id="Cursos" type="text" name="Cursos" value=""/></td>
+	</tr>
+	<tr>
+		<td colspan="6" align="left"><b>Libros(s) de texto que emplear&aacute; en el ciclo escolar 2011-2012 en cada nivel:</b></td>				
+	</tr>
+	<tr>
+	<td colspan="6" align="left"><input size="180" id="Libros" type="text" name="Libros" value=""/></td>
+	</tr>
+	<tr>
+		<td colspan="6" align="left"><b>&iquest;Qu&eacute; cursos  considerar&iacute;a usted necesarios para fortalecer su enseñanza del idioma?:</b></td>				
+	</tr>
+	<tr>
+	<td colspan="6" align="left"><input size="180" id="Cursos" type="text" name="Cursos" value=""/></td>
+	</tr>
+	<tr>
+		<td colspan="6" align="left"><b>Elija el periodo en que prefiere tomar los cursos. Considere que adem&aacute;s de las propuestas que se hagan, durante el periodo interanual e intersemestral se imparten los cursos institucionales.</b></td>				
+	</tr>
+	<tr>
+	<td colspan="2" valign="middle"><INPUT id="Periodo" type="radio" name="Periodo" value="Interanual"> Interanual.</td>
+	</tr>
+	<tr>		
+	<td colspan="2" valign="middle"><INPUT id="Periodo2" type="radio" name="Periodo2" value="Intersemestral">Intersemestral.</td>
+	</tr>	
+	<tr>	
+	<td colspan="2" valign="middle"><INPUT id="Periodo3" type="radio" name="Periodo3" value="Viernes"> Los Viernes.</td>
+	</tr>	
+	<tr>	
+	<td colspan="5" valign="middle"><INPUT id="Periodo4" type="radio" name="Periodo4" value="Interanual">De lunes a viernes durante el periodo de clase, en un horario que no interfiera con mi docencia.</td>
+	</tr>	
+	<tr>	
+	<td colspan="5" valign="middle"><INPUT id="Periodo5" type="radio" name="Periodo5" value="Interanual"> Alg&uacute;n otro d&iacute;a de la semana diferente al viernes de 13 a 15hrs.</td>
+	</tr>
+	<hr>
+	
+	<tr>
+		<td ><input type="reset" name="reset" value="Borrar"/></td>
+		<td ><input type="submit" name="submit" value="Validar"/></td>		
+	</tr>
+	
+</table>
+</div>
+
+
+<img src="UNAM100AniosHch.png" style="float:right"/>
+</form>
+</body>
+</html>
+
+<!-- Fecha y firma de la página -->
+<!--<address color:""">Desde el 15 de Marzo de 2011<br>
+Hugix</address>-->
+</HTML>

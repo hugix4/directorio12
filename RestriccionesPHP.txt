@@ -1,0 +1,26 @@
+ayer x la noche #cuenta 653 653 
+rosa_barba@cuaed.unam.mx
+
+
+<?
+if($nivel_acceso == 0){//Por defecto
+echo "Usuario";
+}
+if($nivel_acceso == 1){
+echo "Administrador";
+}
+if($nivel_acceso == 2){
+echo "Moderador";
+}
+if($nivel_acceso == 3){
+echo "Posteador";
+}
+
+/*Entonces despues bloqueas las paginas...
+Por ejemplo: Administracion.php solo entran Administradores y Moderadores...*/
+
+if($nivel_acceso ==  1 || $nivel_acceso == 2){
+echo "Bienvendo Administrador o Moderador usted puede ver esta seccion";
+} else {
+echo "Area restringida!!";
+}

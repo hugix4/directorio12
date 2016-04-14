@@ -1,0 +1,139 @@
+h1 {
+	font-family:Century Gothic, sans-serif;
+	max-width: 840px;
+	color: #ffffff}
+h3{
+	font-family:Century Gothic, sans-serif;
+	color: #ffffff}
+	
+h4{
+	font-family:Century Gothic, sans-serif;
+	color: #ffffff}
+	
+h5{
+	font-family:Century Gothic, sans-serif;
+	color: #ffffff}
+	
+p{color: #ffffff;
+	text-align: justify;
+	max-width:840px;
+	line-height:120%;
+	font-family:Verdana, Geneva, sans-serif;
+}
+	
+body{
+	font-family: Century Gothic, sans-serif;
+	color:#fff;
+	background: #050564;
+	background-attachment: fixed;
+	/*background-color: #040d57*/}
+	 
+img.centrado{
+	margin: 4px;
+	display:block;
+	/*margin-left: auto*/;
+	/*margin-right:auto*/}
+	 
+ul.navbar {
+	background:url(BotonHgrande2.png);
+	background-repeat:repeat;
+	list-style:none;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	font-size:18px;
+	/*top: 2em;
+	left: 1em;
+	width: 9em*/}
+
+ul.navbar li {
+		/*background-image:url(Reposo.jpg);*/
+		font-size:18px;
+		font-weight:bold;
+		position: relative;
+		/*background: #2276da;		*/
+		margin:0px;
+		width: 100px;
+		min-height: 16px;
+		text-align:center;
+		list-style:none;
+		padding: 0px;
+		color: #ffffff;
+		float: left;
+		display: inline		
+		}
+		
+ul.navbar ul{
+	/*background-image:url(BotonHgrande2.png);*/
+	position: relative;
+	font-size:18px;
+	left: -40px;
+	top: 22px;
+	width: 98px;
+	display: none;
+	list-style: none;
+}
+
+ul.navbar li:hover {	
+background:url(BotonHLgrande2.png);
+/*background-image:url(Reposo.jpg);*/
+	/*background: #040d57;*/
+	font-size:18px;
+	}
+	
+ul.navbar li:hover > ul{	
+/*background:url(BotonH.png);*/
+background-repeat:repeat;
+position: absolute;
+/*background-image:url(Reposo.jpg);*/
+   display:block;
+   /*background: red;*/
+	max-width:10px;
+}
+		
+			
+ul.navbar a {
+		text-decoration: none }
+	  a:link {
+		color: #d9d91a}
+	  a:visited {
+		color: #d9d91a}
+
+address {
+	margin-top: 1em;
+	padding-top: 1em;
+	max-width:1000px;
+	border-top: thin dotted black;
+	font-family: Comic Sans MS,Helvetica,"Times New Roman",Times, serif;
+	color: #050a2f;}
+
+#menu1 ul {
+	position: fixed;
+	left: 1030px;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 160px;
+    font-family: Arial, sans-serif;
+	font-weight:bold;
+    font-size: 11pt;
+}
+
+#menu1 ul li {
+    background-color: #d9d91a;
+}
+
+#menu1 ul li a {
+    color: #040d57;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 10px 10px 10px 20px;
+}
+
+#menu1 ul li a:hover {
+    background: #040d57;
+    border-left: 10px solid #9c9c24;
+    color: #d9d91a;
+}
